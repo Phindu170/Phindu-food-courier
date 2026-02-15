@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phindu Food Courier - Mzuzu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍔 Phindu Food Courier</h1>
+    <p>Fast & Reliable Food Delivery in Mzuzu</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#order">Order</a>
+    <a href="#fees">Delivery Fees</a>
+    <a href="#payment">Payment</a>
+</nav>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+Phindu Food Courier is a fast and trusted food delivery service in Mzuzu, Malawi.
+We connect customers to their favorite restaurants and deliver directly to homes,
+campuses and offices.
+</p>
+</section>
+
+<section id="order">
+<h2>Order Now (WhatsApp)</h2>
+
+<label>Restaurant</label>
+<select id="restaurant">
+    <option>KIPS</option>
+    <option>Kwithu Kitchen</option>
+    <option>Serenity Gardens</option>
+    <option>Galitos</option>
+    <option>Chicken Lito</option>
+</select>
+
+<label>Food Items</label>
+<textarea id="items" placeholder="Example: 2 Burgers + 1 Chips"></textarea>
+
+<label>Your Location</label>
+<input type="text" id="location" placeholder="Area + Landmark">
+
+<label>Your Phone Number</label>
+<input type="text" id="phone" placeholder="0999XXXXXX">
+
+<button onclick="sendToWhatsApp()">Place Order via WhatsApp</button>
+</section>
+
+<section id="fees">
+<h2>Delivery Fees</h2>
+<ul>
+<li>Mzuzu Town (Chimaliro, Zolozolo, Katawa, Chiputula, Mataifa, Mapale, Masasa, Clock Tower, Botanic): MK 2,500</li>
+<li>Medium Distance (Chibavi, Chibanja, Katoto, Moyale, HillTop,): MK 4,000</li>
+<li>Far Distance (Luwinga, Mzuni, Nkholongo, Area 4, Geisha, SOS, Mchengautuwa, Lusangazi): MK 6,500</li>
+</ul>
+</section>
+
+<!-- Payment Popup -->
+<div id="paymentPopup" class="popup">
+    <div class="popup-content">
+        <h3>Payment Instructions</h3>
+        <p>Airtel Money: 099XXXXXXX</p>
+        <p>TNM Mpamba: 088XXXXXXX</p>
+        <button onclick="sendWhatsApp()">I Have Paid</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+
+<footer>
+<p>© 2026 Phindu Food Courier - Mzuzu</p>
+<p>info@phindufoodcourier.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* ===============================
+   PHINDU FOOD COURIER STYLE
+   Modern Attractive Design
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #fff7f0, #ffe8d6);
+    color:#333;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size:36px;
+    font-weight:700;
+}
+
+header p{
+    font-size:18px;
+    margin-top:10px;
+    opacity:0.9;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff6600;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    background:white;
+    margin:30px auto;
+    padding:30px;
+    width:90%;
+    max-width:1000px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    animation:fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+section h2{
+    color:#ff6600;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+/* ================= FORMS ================= */
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0 20px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color:#ff6600;
+    outline:none;
+    box-shadow:0 0 5px rgba(255,102,0,0.3);
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+    background:linear-gradient(135deg, #25D366, #128C7E);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= CART ================= */
+
+#cartList{
+    list-style:none;
+    margin-top:15px;
+}
+
+#cartList li{
+    background:#fff3e6;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+#cartList button{
+    background:#ff3333;
+    padding:5px 8px;
+    font-size:12px;
+}
+
+#cartList button:hover{
+    background:#cc0000;
+}
+
+/* ================= TOTAL BOX ================= */
+
+.total-box{
+    background:#ffefe6;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.total-box p{
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+#grandTotal{
+    color:#ff3300;
+    font-size:20px;
+}
+
+/* ================= DELIVERY FEES ================= */
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    padding:8px 0;
+    font-size:15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    font-size:14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:26px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    section{
+        padding:20px;
+    }
+
+}
