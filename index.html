@@ -30,27 +30,67 @@ campuses and offices.
 </section>
 
 <section id="order">
+<section>
 <h2>Order Now (WhatsApp)</h2>
 
-<label>Restaurant</label>
+<label>Select Restaurant</label>
 <select id="restaurant">
-    <option>KIPS</option>
-    <option>Kwithu Kitchen</option>
-    <option>Serenity Gardens</option>
-    <option>Galitos</option>
-    <option>Chicken Lito</option>
+    <option value="KIPS">KIPS</option>
+    <option value="Bella's Food Court">Bella's Food Court</option>
+    <option value="Kwithu Kitchen">Kwithu Kitchen</option>
+    <option value="Serenity Gardens">Serenity Gardens</option>
+    <option value="Galitos">Galitos</option>
+    <option value="Chicken Lito">Chicken Lito</option>
 </select>
 
-<label>Food Items</label>
-<textarea id="items" placeholder="Example: 2 Burgers + 1 Chips"></textarea>
+<h3>Menu</h3>
 
-<label>Your Location</label>
-<input type="text" id="location" placeholder="Area + Landmark">
+<div class="food-grid">
 
-<label>Your Phone Number</label>
-<input type="text" id="phone" placeholder="0999XXXXXX">
+    <div class="food-card">
+        <h4>Chicken Burger</h4>
+        <p>MK 4500</p>
+        <input type="number" id="qty1" min="1" value="1">
+        <button onclick="addToCart('Chicken Burger',4500,'qty1')">
+            Add to Cart
+        </button>
+    </div>
 
-<button onclick="sendToWhatsApp()">Place Order via WhatsApp</button>
+    <div class="food-card">
+        <h4>Large Pizza</h4>
+        <p>MK 8500</p>
+        <input type="number" id="qty2" min="1" value="1">
+        <button onclick="addToCart('Large Pizza',8500,'qty2')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="food-card">
+        <h4>Grilled Chicken</h4>
+        <p>MK 6000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Grilled Chicken',6000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+</div>
+
+<h3>Your Cart</h3>
+<ul id="cartList"></ul>
+
+<button onclick="calculateDeliveryLive()">Calculate Delivery Fee</button>
+
+<p>Subtotal: MK <span id="subtotal">0</span></p>
+<p>Delivery Fee: MK <span id="deliveryFee">0</span></p>
+<h3>Total: MK <span id="grandTotal">0</span></h3>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="location" placeholder="Your Location">
+<input type="text" id="phone" placeholder="Your Phone Number">
+
+<button onclick="placeOrder()">Place Order via WhatsApp</button>
+
 </section>
 
 <section id="fees">
