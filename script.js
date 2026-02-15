@@ -29,7 +29,7 @@ function addToCart(name, price, qtyId){
         existingItem.total = existingItem.qty * existingItem.price;
     }else{
         cart.push({
-            name: name,
+            name: name,        // ✅ Use the name parameter
             price: price,
             qty: quantity,
             total: price * quantity
@@ -48,19 +48,33 @@ function updateCart(){
 
     let subtotal = 0;
 
+    if(cart.length === 0){
+        cartList.innerHTML = "<p>Your cart is empty</p>";
+        document.getElementById("subtotal").innerText = 0;
+        document.getElementById("grandTotal").innerText = subtotal + deliveryFee;
+        return;
+    }
+
     cart.forEach((item,index)=>{
-        subtotal += item.total;
+       subtotal += item.total;
 
         cartList.innerHTML += `
-            <li>
-                ${item.name} (x${item.qty}) - MK ${item.total}
-                <button onclick="removeItem(${index})">❌</button>
-            </li>
+            <div class="cart-item">
+                <div class="cart-left">
+                    <h4>${item.name}</h4>
+                    <p>Price: MK ${item.price}</p>
+                    <p>Quantity: ${item.qty}</p>
+                </div>
+
+                <div class="cart-right">
+                    <h3>MK ${item.total}</h3>
+                    <button onclick="removeItem(${index})">Remove</button>
+                </div>
+            </div>
         `;
     });
 
     document.getElementById("subtotal").innerText = subtotal;
-    document.getElementById("deliveryFee").innerText = deliveryFee;
     document.getElementById("grandTotal").innerText = subtotal + deliveryFee;
 }
 

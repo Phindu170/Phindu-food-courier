@@ -37,7 +37,7 @@ campuses and offices.
 <select id="restaurant">
     <option value="KIPS">KIPS</option>
     <option value="Bella's Food Court">Bella's Food Court</option>
-    <option value="Kwithu Kitchen">Kwithu Kitchen</option>
+    <option value="Kwithu Cofee Den">Kwithu Cofee Den</option>
     <option value="Serenity Gardens">Serenity Gardens</option>
     <option value="Galitos">Galitos</option>
     <option value="Chicken Lito">Chicken Lito</option>
@@ -48,8 +48,8 @@ campuses and offices.
 <div class="food-grid">
 
     <div class="food-card">
-        <h4>Chicken Burger</h4>
-        <p>MK 4500</p>
+        <h4>Kwithu breakfast</h4>
+        <p>MK 17000</p>
         <input type="number" id="qty1" min="1" value="1">
         <button onclick="addToCart('Chicken Burger',4500,'qty1')">
             Add to Cart
@@ -58,7 +58,7 @@ campuses and offices.
 
     <div class="food-card">
         <h4>Large Pizza</h4>
-        <p>MK 8500</p>
+        <p>MK 38000</p>
         <input type="number" id="qty2" min="1" value="1">
         <button onclick="addToCart('Large Pizza',8500,'qty2')">
             Add to Cart
@@ -66,10 +66,118 @@ campuses and offices.
     </div>
 
     <div class="food-card">
-        <h4>Grilled Chicken</h4>
-        <p>MK 6000</p>
+        <h4>Medium Pizza</h4>
+        <p>MK 34000</p>
         <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Grilled Chicken',6000,'qty3')">
+        <button onclick="addToCart('Medium Pizza',34000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Small Pizza</h4>
+        <p>MK 28000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Small Pizza',28000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Grilled Chicken</h4>
+        <p>MK 17000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Grilled Chicken',17000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Ice Cream</h4>
+        <p>MK 4000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Ice Cream',4000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Eag & toast</h4>
+        <p>MK 6500</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Eag & toast',6500,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Rice & Beef</h4>
+        <p>MK 8000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Rice & Beef',8000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Chips & Beef</h4>
+        <p>MK 8000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Chips & Beef',8000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Beef burger</h4>
+        <p>MK 19000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Beef burger',19000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Chicken burger</h4>
+        <p>MK 15500</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Chicken burger',15500,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Cheese Beef Burger</h4>
+        <p>MK 21000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Cheese Beef Burger',21000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Sticky Wings</h4>
+        <p>MK 19000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Sticky Wings',19000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Samosa</h4>
+        <p>MK 3000</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Samosa',3000,'qty3')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="food-card">
+        <h4>Chocolate Doughnuts</h4>
+        <p>MK 3500</p>
+        <input type="number" id="qty3" min="1" value="1">
+        <button onclick="addToCart('Chocolate Doughnuts',3500,'qty3')">
             Add to Cart
         </button>
     </div>
@@ -79,10 +187,7 @@ campuses and offices.
 <h3>Your Cart</h3>
 <ul id="cartList"></ul>
 
-<button onclick="calculateDeliveryLive()">Calculate Delivery Fee</button>
-
 <p>Subtotal: MK <span id="subtotal">0</span></p>
-<p>Delivery Fee: MK <span id="deliveryFee">0</span></p>
 <h3>Total: MK <span id="grandTotal">0</span></h3>
 
 <input type="text" id="name" placeholder="Your Name">
@@ -101,16 +206,6 @@ campuses and offices.
 <li>Far Distance (Luwinga, Mzuni, Nkholongo, Area 4, Geisha, SOS, Mchengautuwa, Lusangazi): MK 6,500</li>
 </ul>
 </section>
-
-<!-- Payment Popup -->
-<div id="paymentPopup" class="popup">
-    <div class="popup-content">
-        <h3>Payment Instructions</h3>
-        <p>Airtel Money: 099XXXXXXX</p>
-        <p>TNM Mpamba: 088XXXXXXX</p>
-        <button onclick="sendWhatsApp()">I Have Paid</button>
-        <button onclick="closePopup()">Cancel</button>
-    </div>
 
 <footer>
 <p>© 2026 Phindu Food Courier - Mzuzu</p>

@@ -147,6 +147,46 @@ button:hover{
     background:#cc0000;
 }
 
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.cart-left h4{
+    margin:0;
+}
+
+.cart-left p{
+    margin:3px 0;
+    font-size:14px;
+    color:#555;
+}
+
+.cart-right h3{
+    margin:0;
+    color:#ff6600;
+}
+
+.cart-right button{
+    margin-top:5px;
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.cart-right button:hover{
+    background:darkred;
+}
+
 /* ================= TOTAL BOX ================= */
 
 .total-box{
