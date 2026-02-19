@@ -1,217 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Phindu Food Courier - Mzuzu</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phindu Food Courier | Mzuzu's #1 Food Delivery</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  </head>
 <body>
+<div class="container">
 
-<header>
-    <h1>🍔 Phindu Food Courier</h1>
-    <p>Fast & Reliable Food Delivery in Mzuzu</p>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <h1>Phindu Food Courier</h1>
+      <span><i class="fas fa-map-pin"></i> Fast & reliable · Mzuzu</span>
+    </div>
+    <nav class="nav">
+      <a href="#">About</a>
+      <a href="#">Order</a>
+      <a href="#">Delivery Fees</a>
+      <a href="#">Payment</a>
+    </nav>
+  </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#order">Order</a>
-    <a href="#fees">Delivery Fees</a>
-    <a href="#payment">Payment</a>
-</nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your taste, <span class="highlight">our speed</span></h2>
+      <p>We connect you to favorite restaurants in Mzuzu – from Chimaliro to Luwinga.</p>
+      <button class="hero-btn" id="heroWhatsAppBtn"><i class="fab fa-whatsapp"></i> Order Now (WhatsApp)</button>
+    </div>
+    <div class="hero-image">
+      <i class="fas fa-utensils"></i>
+    </div>
+  </section>
 
-<section id="about">
-<h2>About Us</h2>
-<p>
-Phindu Food Courier is a fast and trusted food delivery service in Mzuzu, Malawi.
-We connect customers to their favorite restaurants and deliver directly to homes,
-campuses and offices.
-</p>
-</section>
+  <!-- RESTAURANT TABS -->
+  <div class="resto-tabs" id="restoTabs"></div>
 
-<section id="order">
-<section>
-<h2>Order Now (WhatsApp)</h2>
-
-<label>Select Restaurant</label>
-<select id="restaurant">
-    <option value="KIPS">KIPS</option>
-    <option value="Bella's Food Court">Bella's Food Court</option>
-    <option value="Kwithu Cofee Den">Kwithu Cofee Den</option>
-    <option value="Serenity Gardens">Serenity Gardens</option>
-    <option value="Galitos">Galitos</option>
-    <option value="Chicken Lito">Chicken Lito</option>
-</select>
-
-<h3>Menu</h3>
-
-<div class="food-grid">
-
-    <div class="food-card">
-        <h4>Kwithu breakfast</h4>
-        <p>MK 17000</p>
-        <input type="number" id="qty1" min="1" value="1">
-        <button onclick="addToCart('Chicken Burger',4500,'qty1')">
-            Add to Cart
-        </button>
+  <!-- MAIN ORDER SECTION -->
+  <div class="order-grid">
+    <!-- MENU COLUMN -->
+    <div>
+      <div class="menu-grid" id="menuGrid"></div>
     </div>
 
-    <div class="food-card">
-        <h4>Large Pizza</h4>
-        <p>MK 38000</p>
-        <input type="number" id="qty2" min="1" value="1">
-        <button onclick="addToCart('Large Pizza',8500,'qty2')">
-            Add to Cart
-        </button>
-    </div>
+    <!-- CART SIDEBAR -->
+    <aside class="cart-card" id="cartCard">
+      <div class="cart-title"><i class="fas fa-basket-shopping"></i> Your cart</div>
+      <div class="cart-items" id="cartItemsContainer">
+        <div style="text-align: center; color: #b9a99b; padding: 1.2rem;">Your cart is empty</div>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-row"><span>Subtotal</span> <span id="subtotal">MK 0</span></div>
+        <div class="summary-row total"><span>Total</span> <span id="total">MK 0</span></div>
+      </div>
 
-    <div class="food-card">
-        <h4>Medium Pizza</h4>
-        <p>MK 34000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Medium Pizza',34000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
+      <!-- customer fields -->
+      <div class="cart-fields">
+        <input type="text" id="customerName" placeholder="Your name" value="">
+        <input type="text" id="customerLocation" placeholder="Your location (e.g. Zolozolo)" value="">
+        <input type="tel" id="customerPhone" placeholder="Phone number" value="+265 xxx xxx">
+      </div>
 
-     <div class="food-card">
-        <h4>Small Pizza</h4>
-        <p>MK 28000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Small Pizza',28000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
+      <button class="whatsapp-btn" id="placeOrderBtn"><i class="fab fa-whatsapp"></i> Place order via WhatsApp</button>
 
-     <div class="food-card">
-        <h4>Grilled Chicken</h4>
-        <p>MK 17000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Grilled Chicken',17000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
+      <!-- delivery fees card -->
+      <div class="delivery-card">
+        <h4><i class="fas fa-motorcycle"></i> Delivery fees – Mzuzu</h4>
+        <div class="fee-detail"><span>Town (Chimaliro, Zolozolo, Katawa, Chiputula, Mataifa, Mapato)</span> <span>MK 5,000</span></div>
+        <div class="fee-detail"><span>Medium (Chibavi, Chibanja, Katoto, Moyale, HillTop)</span> <span>MK 8,500</span></div>
+        <div class="fee-detail"><span>Far (Luwinga, Mzuni, Nkhonggo, Area 4, Geisha, SOS, Mchenge)</span> <span>MK 12,000</span></div>
+        <div class="areas-note"><i class="fas fa-info-circle"></i> Exact fee depends on location; Thank You.</div>
+      </div>
+    </aside>
+  </div>
 
-     <div class="food-card">
-        <h4>Ice Cream</h4>
-        <p>MK 4000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Ice Cream',4000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><i class="fas fa-bolt"></i> Delivery under 45 min</div>
+    <div class="trust-item"><i class="fas fa-lock"></i> Secure WhatsApp ordering</div>
+  </div>
 
-     <div class="food-card">
-        <h4>Eag & toast</h4>
-        <p>MK 6500</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Eag & toast',6500,'qty3')">
-            Add to Cart
-        </button>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Phindu Food Courier – Mzuzu, Malawi</div>
+    <div><a href="mailto:info@phindufoodcourier.com"><i class="far fa-envelope"></i> info@phindufoodcourier.com</a></div>
+    <div class="socials">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-
-     <div class="food-card">
-        <h4>Rice & Beef</h4>
-        <p>MK 8000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Rice & Beef',8000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Chips & Beef</h4>
-        <p>MK 8000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Chips & Beef',8000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Beef burger</h4>
-        <p>MK 19000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Beef burger',19000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Chicken burger</h4>
-        <p>MK 15500</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Chicken burger',15500,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Cheese Beef Burger</h4>
-        <p>MK 21000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Cheese Beef Burger',21000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Sticky Wings</h4>
-        <p>MK 19000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Sticky Wings',19000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Samosa</h4>
-        <p>MK 3000</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Samosa',3000,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
-     <div class="food-card">
-        <h4>Chocolate Doughnuts</h4>
-        <p>MK 3500</p>
-        <input type="number" id="qty3" min="1" value="1">
-        <button onclick="addToCart('Chocolate Doughnuts',3500,'qty3')">
-            Add to Cart
-        </button>
-    </div>
-
+  </footer>
 </div>
 
-<h3>Your Cart</h3>
-<ul id="cartList"></ul>
-
-<p>Subtotal: MK <span id="subtotal">0</span></p>
-<h3>Total: MK <span id="grandTotal">0</span></h3>
-
-<input type="text" id="name" placeholder="Your Name">
-<input type="text" id="location" placeholder="Your Location">
-<input type="text" id="phone" placeholder="Your Phone Number">
-
-<button onclick="placeOrder()">Place Order via WhatsApp</button>
-
-</section>
-
-<section id="fees">
-<h2>Delivery Fees</h2>
-<ul>
-<li>Mzuzu Town (Chimaliro, Zolozolo, Katawa, Chiputula, Mataifa, Mapale, Masasa, Clock Tower, Botanic): MK 2,500</li>
-<li>Medium Distance (Chibavi, Chibanja, Katoto, Moyale, HillTop,): MK 4,000</li>
-<li>Far Distance (Luwinga, Mzuni, Nkholongo, Area 4, Geisha, SOS, Mchengautuwa, Lusangazi): MK 6,500</li>
-</ul>
-</section>
-
-<footer>
-<p>© 2026 Phindu Food Courier - Mzuzu</p>
-<p>info@phindufoodcourier.com</p>
-</footer>
-
+<!-- Link to external JavaScript -->
 <script src="script.js"></script>
 </body>
 </html>

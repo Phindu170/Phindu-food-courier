@@ -1,248 +1,639 @@
-/* ===============================
-   PHINDU FOOD COURIER STYLE
-   Modern Attractive Design
-================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-    background: linear-gradient(to right, #fff7f0, #ffe8d6);
-    color:#333;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    background: linear-gradient(135deg, #ff6600, #ff3300);
-    color:white;
-    padding:40px 20px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-header h1{
-    font-size:36px;
-    font-weight:700;
-}
-
-header p{
-    font-size:18px;
-    margin-top:10px;
-    opacity:0.9;
-}
-
-/* ================= NAVIGATION ================= */
-
-nav{
-    background:#222;
-    padding:15px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ff6600;
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-    background:white;
-    margin:30px auto;
-    padding:30px;
-    width:90%;
-    max-width:1000px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    animation:fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-section h2{
-    color:#ff6600;
-    margin-bottom:20px;
-    font-size:24px;
-}
-
-/* ================= FORMS ================= */
-
-input, select, textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0 20px;
-    border-radius:8px;
-    border:1px solid #ddd;
-    font-size:15px;
-    transition:0.3s;
-}
-
-input:focus, select:focus, textarea:focus{
-    border-color:#ff6600;
-    outline:none;
-    box-shadow:0 0 5px rgba(255,102,0,0.3);
-}
-
-/* ================= BUTTONS ================= */
-
-button{
-    background:linear-gradient(135deg, #25D366, #128C7E);
-    color:white;
-    border:none;
-    padding:12px 20px;
-    font-size:16px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 5px 10px rgba(0,0,0,0.1);
-}
-
-button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 15px rgba(0,0,0,0.2);
-}
-
-/* ================= CART ================= */
-
-#cartList{
-    list-style:none;
-    margin-top:15px;
-}
-
-#cartList li{
-    background:#fff3e6;
-    padding:10px;
-    margin-bottom:10px;
-    border-radius:8px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:14px;
-}
-
-#cartList button{
-    background:#ff3333;
-    padding:5px 8px;
-    font-size:12px;
-}
-
-#cartList button:hover{
-    background:#cc0000;
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#fff;
-    padding:15px;
-    margin-bottom:10px;
-    border-radius:10px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.1);
-}
-
-.cart-left h4{
-    margin:0;
-}
-
-.cart-left p{
-    margin:3px 0;
-    font-size:14px;
-    color:#555;
-}
-
-.cart-right h3{
-    margin:0;
-    color:#ff6600;
-}
-
-.cart-right button{
-    margin-top:5px;
-    background:red;
-    color:white;
-    border:none;
-    padding:5px 10px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.cart-right button:hover{
-    background:darkred;
-}
-
-/* ================= TOTAL BOX ================= */
-
-.total-box{
-    background:#ffefe6;
-    padding:20px;
-    border-radius:12px;
-    margin-top:20px;
-}
-
-.total-box p{
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-#grandTotal{
-    color:#ff3300;
-    font-size:20px;
-}
-
-/* ================= DELIVERY FEES ================= */
-
-ul{
-    list-style:none;
-}
-
-ul li{
-    padding:8px 0;
-    font-size:15px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-    font-size:14px;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:768px){
-
-    header h1{
-        font-size:26px;
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav a{
-        display:block;
-        margin:10px 0;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #2d2a24;
+      line-height: 1.5;
     }
 
-    section{
-        padding:20px;
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
-}
+    /* ----- Header ----- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c73d2c, #e67e22);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      font-size: 0.9rem;
+      color: #5f6b6a;
+      background: #fff1e0;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 0.2rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #3b3a36;
+      font-weight: 500;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav a:hover {
+      color: #c73d2c;
+      border-bottom-color: #c73d2c;
+    }
+
+    /* ----- Hero Section ----- */
+    .hero {
+      background: linear-gradient(105deg, #fff3e9 0%, #ffe8d9 100%);
+      border-radius: 3rem;
+      padding: 3rem 3.5rem;
+      margin: 2rem 0 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 25px 40px -18px rgba(199, 61, 44, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(230,126,34,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      color: #2d2a24;
+    }
+
+    .hero-text .highlight {
+      color: #c73d2c;
+      border-bottom: 4px solid #e67e22;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #5a4f47;
+      max-width: 500px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-btn {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: 0 12px 20px -10px #25D36680;
+      transition: 0.25s;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.3);
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-btn i {
+      font-size: 1.5rem;
+    }
+
+    .hero-btn:hover {
+      background: #20b859;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -8px #25D366;
+    }
+
+    .hero-image {
+      font-size: 8rem;
+      color: #e67e22;
+      opacity: 0.8;
+      filter: drop-shadow(0 10px 12px rgba(0,0,0,0.1));
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ----- Restaurant Tabs with Logos ----- */
+    .resto-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+
+    .resto-tab {
+      background: white;
+      border: 2px solid #ffe3d1;
+      border-radius: 60px;
+      padding: 0.6rem 1.8rem 0.6rem 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #4a3f38;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .resto-tab .logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #f5e3d5;
+      border: 2px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .resto-tab .fallback-icon {
+      display: none;
+      font-size: 1.4rem;
+      color: #e67e22;
+    }
+
+    .resto-tab.active {
+      background: #c73d2c;
+      border-color: #c73d2c;
+      color: white;
+    }
+
+    .resto-tab.active .fallback-icon {
+      color: white;
+    }
+
+    .resto-tab:hover {
+      border-color: #e67e22;
+    }
+
+    /* ----- Main 2‑column layout ----- */
+    .order-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2.5rem;
+      margin: 2rem 0 4rem;
+    }
+
+    /* ----- Menu grid with food images ----- */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 2.2rem;
+      padding: 1.8rem 1rem 1.5rem;
+      box-shadow: 0 15px 30px -12px rgba(0,0,0,0.1);
+      transition: all 0.25s ease;
+      border: 1px solid #ffe5d5;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px -12px #c73d2c55;
+      border-color: #e67e22;
+    }
+
+    .menu-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: -1.8rem auto 1rem;
+      border: 4px solid white;
+      box-shadow: 0 6px 12px rgba(199,61,44,0.15);
+      overflow: hidden; /* important for image fit */
+      background: #ffefe3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* makes image fill the circle */
+    }
+
+    .menu-img .fallback-icon {
+      font-size: 3.2rem;
+      color: #c73d2c;
+    }
+
+    .menu-card:hover .menu-img .fallback-icon {
+      transform: scale(1.1);
+      color: #e67e22;
+    }
+
+    .menu-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .menu-price {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #2d2a24;
+      text-align: center;
+      margin: 0.5rem 0 1.2rem;
+    }
+
+    .menu-price small {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #c73d2c;
+    }
+
+    .qty-add {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: auto;
+      padding: 0 0.2rem;
+    }
+
+    .qty-add input {
+      width: 65px;
+      padding: 0.7rem 0.2rem;
+      border: 1px solid #f0cfba;
+      border-radius: 40px;
+      text-align: center;
+      font-weight: 600;
+      background: #fefaf5;
+    }
+
+    .add-btn {
+      background: linear-gradient(145deg, #e67e22, #c73d2c);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.8rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      flex: 1;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px #e67e2260;
+    }
+
+    .add-btn i {
+      font-size: 1rem;
+    }
+
+    .add-btn:hover {
+      background: linear-gradient(145deg, #c73d2c, #e67e22);
+      transform: scale(1.02);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #ffdaaa;
+      color: #a3501a;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    /* ----- Cart Sidebar (unchanged) ----- */
+    .cart-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 30px 45px -20px rgba(0,0,0,0.2);
+      border: 1px solid #ffe3d1;
+      position: sticky;
+      top: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .cart-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c73d2c, #e67e22);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-title i {
+      background: #ffede1;
+      padding: 0.7rem;
+      border-radius: 50%;
+      color: #c73d2c;
+      font-size: 1.3rem;
+    }
+
+    .cart-items {
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 5px;
+      margin-bottom: 1rem;
+      border-bottom: 2px dashed #edd9c9;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f7e1d1;
+    }
+
+    .cart-item-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-item-name {
+      font-weight: 700;
+    }
+
+    .cart-item-detail {
+      font-size: 0.8rem;
+      color: #756b63;
+    }
+
+    .cart-item-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cart-item-price {
+      font-weight: 800;
+      color: #2d2a24;
+    }
+
+    .remove-item {
+      background: none;
+      border: none;
+      color: #c73d2c;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+
+    .remove-item:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      color: #b13e2e;
+    }
+
+    .cart-summary {
+      padding: 1rem 0 0.5rem;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+
+    .summary-row.total {
+      font-size: 1.4rem;
+      color: #c73d2c;
+      border-top: 2px solid #edd1bf;
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .cart-fields {
+      margin: 1.2rem 0 0.8rem;
+    }
+
+    .cart-fields input {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      margin: 0.4rem 0;
+      border: 1px solid #f0cfba;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      background: #fefaf5;
+      transition: 0.15s;
+    }
+
+    .cart-fields input:focus {
+      outline: none;
+      border-color: #e67e22;
+      box-shadow: 0 0 0 4px #ffe1ce;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      width: 100%;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 10px 18px -6px #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background: #20b859;
+      transform: scale(1.02);
+    }
+
+    .delivery-card {
+      background: #fff4ea;
+      border-radius: 2rem;
+      padding: 1.5rem;
+    }
+
+    .delivery-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+      color: #3e3a34;
+      margin-bottom: 1rem;
+    }
+
+    .fee-detail {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      border-bottom: 1px dashed #dbbc9f;
+      padding: 0.6rem 0;
+    }
+
+    .fee-detail:last-of-type {
+      border: none;
+    }
+
+    .fee-detail span:first-child {
+      font-weight: 500;
+    }
+
+    .fee-detail span:last-child {
+      font-weight: 700;
+      color: #c73d2c;
+    }
+
+    .areas-note {
+      font-size: 0.8rem;
+      color: #7b6e64;
+      margin-top: 1rem;
+    }
+
+    /* ----- Trust Bar ----- */
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      background: white;
+      border-radius: 4rem;
+      padding: 1.5rem 2.5rem;
+      margin: 3rem 0 2rem;
+      box-shadow: 0 8px 22px -10px rgba(0,0,0,0.05);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 500;
+    }
+
+    .trust-item i {
+      font-size: 2rem;
+      color: #e67e22;
+    }
+
+    /* ----- Footer ----- */
+    .footer {
+      background: #2f2a24;
+      color: #efdbcd;
+      border-radius: 3rem 3rem 2rem 2rem;
+      padding: 2.5rem 3rem;
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer a {
+      color: #f5b177;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    /* ----- Responsive ----- */
+    @media (max-width: 900px) {
+      .order-grid {
+        grid-template-columns: 1fr;
+      }
+      .cart-card {
+        position: static;
+      }
+      .header {
+        flex-direction: column;
+        align-items: start;
+      }
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+      .hero {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .nav {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .trust-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 2rem;
+      }
+    }
