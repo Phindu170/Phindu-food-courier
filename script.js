@@ -31,12 +31,23 @@ const restaurants = {
     logo: 'images/bellas-logo.png',
     icon: 'fa-burger',
     menu: [
-      { name: 'Chicken Burger', price: 12000, popular: true, image: 'images/chicken-burger.jpg' },
-      { name: 'Beef Burger', price: 13500, image: 'images/beef-burger.jpg' },
-      { name: 'Chips & Chicken', price: 15000, image: 'images/chips-chicken.jpg' },
-      { name: 'Sausage Roll', price: 5000, image: 'images/sausage-roll.jpg' },
-      { name: 'Milkshake', price: 6000, image: 'images/milkshake.jpg' },
-      { name: 'Veggie Wrap', price: 9500, image: 'images/veggie-wrap.jpg' }
+      { name: 'Chicken Burger', price: 13500, popular: true, image: 'images/chicken-burger.jpg' },
+      { name: 'Classic Burger', price: 11500, popular: true, image: 'images/classic-burger.jpg' },
+      { name: 'Chips & Chicken', price: 15000, popular: true, image: 'images/chips-chicken.jpg' },
+      { name: 'Chicken Pizza', price: 25000, popular: true, image: 'images/chicken-pizza.jpg' },
+      { name: 'Surpreme Pizza', price: 24000, popular: true, image: 'images/surpreme-pizza.jpg' },
+      { name: 'Hawaiian Pizza', price: 28500, popular: true, image: 'images/hawaiian-pizza.jpg' },
+      { name: 'Veggie Pizza', price: 21500, popular: true, image: 'images/Veggie-pizza.jpg' },
+      { name: 'Meat Lovers', price: 29000, popular: true, image: 'images/meat-lovers.jpg' },
+      { name: 'T-bone Steak(Chips/Rice)', price: 14000, popular: true, image: 'images/t-bone-steak.jpg' },
+      { name: 'Local Chicken(Nsima/Rice)', price: 12000, popular: true, image: 'images/local-chicken.jpg' },
+      { name: 'Chambo(Rice/Nsima)', price: 19000, popular: true, image: 'images/chambo.jpg' },
+      { name: 'Grilled Chicken(Chips/Rice)', price: 13500, popular: true, image: 'images/grilled-chicken.jpg' },
+      { name: 'Batala(/Rice/Chips)', price: 19000, popular: true, image: 'images/batala.jpg' },
+      { name: 'Beef Stir Fry', price: 14000, popular: true, image: 'images/beef-stir-fry.jpg' },
+      { name: 'Samosas', price: 9500, popular: true, image: 'images/samosas.jpg' },
+      { name: 'Sausages', price: 3000, popular: true, image: 'images/sausages.jpg' },
+      { name: 'Chicken Wings', price: 10000, popular: true, image: 'images/chicken-wings.jpg' },
     ]
   },
   galitos: {
@@ -69,15 +80,35 @@ const restaurants = {
   },
   kwithu: {
     name: 'Kwithu Coffee Den',
-    logo: 'images/kwithu-logo.png',
+    logo: 'images/kwithu-coffee-den-logo.png.',
     icon: 'fa-mug-hot',
     menu: [
-      { name: 'Cappuccino', price: 5500, popular: true, image: 'images/cappuccino.jpg' },
-      { name: 'Latte', price: 6000, image: 'images/latte.jpg' },
-      { name: 'Espresso', price: 4000, image: 'images/espresso.jpg' },
-      { name: 'Blueberry Muffin', price: 4500, image: 'images/muffin.jpg' },
-      { name: 'Cheese Cake', price: 8500, image: 'images/cheesecake.jpg' },
-      { name: 'Club Sandwich', price: 12000, image: 'images/club-sandwich.jpg' }
+      { name: 'Kwithu Breakfast', price: 17000, popular: true, image: 'images/kwithu-breakfast.jpg' },
+      { name: 'Beef Burger', price: 19000, popular: true, image: 'images/beef-burger.jpg' },
+      { name: 'Cheese Beef Burger', price: 21000, popular: true, image: 'images/cheese-beef-burger.jpg' },
+      { name: 'Chicken Burger', price: 15500, popular: true, image: 'images/chicken-burger.jpg' },
+      { name: 'Chicken Sandwish', price: 14000, popular: true, image: 'images/chicken-sandwish.jpg' },
+      { name: 'Steak Sandwish', price: 18000, popular: true, image: 'images/steak-sandwish.jpg' },
+      { name: 'Chicken Wrap', price: 16300, popular: true,  image: 'images/chicken-wrap.jpg' },
+      { name: 'Beef Wrap', price: 19000, popular: true, image: 'images/beef-wrap.jpg' },
+      { name: 'Grilled Chicken', price: 17000, popular: true, image: 'images/grilled chicken.jpg' },
+      { name: 'T-bone steak', price: 25000, popular: true, image: 'images/t-bone steak.jpg' },
+      { name: 'Small Pizza(BBQ Beef)', price: 22000, popular: true,  image: 'images/small-pizza(BBQ Beef).jpg' },
+      { name: 'Small Pizza(Chicken)', price: 20000, popular: true, image: 'images/small pizza(chicken).jpg' },
+      { name: 'small Pizza(Vegetarian)', price: 25000, popular: true, image: 'images/small pizza(vegetarian).jpg' },
+      { name: 'Medium Pizza(BBQ Beef)', price: 27000, popular: true, image: 'images/medium pizza(BBQ Beef).jpg' },
+      { name: 'Medium Pizza(Chicken)', price: 6000, popular: true,  image: 'images/medium pizza(chicken).jpg' },
+      { name: 'Medium Pizza(Vegetarian)', price: 28000, popular: true, image: 'images/medium pizza(vegetarian).jpg' },
+      { name: 'Large Pizza(BBQ Beef)', price: 32000, popular: true, image: 'images/large pizza(BBQ beef).jpg' },    
+      { name: 'Large Pizza(Chicken)', price: 32000, popular: true,  image: 'images/large pizza(chicken).jpg' },
+      { name: 'Large Pizza(Vegetarian)', price: 30000, popular: true,  image: 'images/large pizza(vegetarian).jpg' },
+      { name: 'Sticky Wings', price: 19000, popular: true, image: 'images/sticky-wings.jpg' },
+      { name: 'Samosa', price: 3000, image: 'images/samosa.jpg' },
+      { name: 'Sausage', price: 3000, image: 'images/sausage.jpg' },
+      { name: 'Doughnuts', price: 1800, image: 'images/doughnuts.jpg' },
+      { name: 'Chocolate Doughnuts', price: 3500, image: 'images/chocolate-doughnuts.jpg' },
+      { name: 'Eag & Toast', price: 65000, image: 'images/egg-toast.jpg' },
+      { name: 'Club Sandwich', price: 12000, image: 'images/club-sandwich.jpg' },
     ]
   },
 
@@ -88,11 +119,8 @@ const restaurants = {
     icon: 'fa-drumstick-bite',
     menu: [
       { name: 'Litos 2pc Chicken', price: 14500, popular: true, image: 'images/litos-2pc.jpg' },
-      { name: 'Litos 4pc Chicken', price: 26000, image: 'images/litos-4pc.jpg' },
-      { name: 'Chicken Burger', price: 11000, image: 'images/litos-burger.jpg' },
-      { name: 'Spicy Wings (4pcs)', price: 9000, image: 'images/litos-wings.jpg' },
-      { name: 'Chips', price: 4000, image: 'images/litos-chips.jpg' },
-      { name: 'Soda (500ml)', price: 1500, image: 'images/soda.jpg' }
+      { name: 'Litos 4pc Chicken', price: 26000, popular: true, image: 'images/litos-4pc.jpg' },
+      { name: 'Chicken Burger', price: 11000, popular: true,  image: 'images/litos-burger.jpg' },
     ]
   },
   laCriso: {
@@ -108,33 +136,26 @@ const restaurants = {
       { name: 'Fresh Juice (Mango)', price: 5000, image: 'images/mango-juice.jpg' }
     ]
   },
-  midland: {
-    name: 'Midland Fast Food',
-    logo: 'images/midland-logo.png',
-    icon: 'fa-bolt',
-    menu: [
-      { name: 'Double Cheeseburger', price: 13000, popular: true, image: 'images/double-cheeseburger.jpg' },
-      { name: 'Chicken Burger Meal', price: 16000, image: 'images/chicken-burger-meal.jpg' },
-      { name: 'Hot Dog', price: 7000, image: 'images/hotdog.jpg' },
-      { name: 'French Fries (large)', price: 5500, image: 'images/fries-large.jpg' },
-      { name: 'Onion Rings', price: 4500, image: 'images/onion-rings.jpg' },
-      { name: 'Milkshake (chocolate)', price: 6000, image: 'images/choc-milkshake.jpg' }
-    ]
-  },
-  meatZone: {
+  meatzone: {
     name: 'Meat Zone',
     logo: 'images/meat-zone-logo.png',
-    icon: 'fa-bacon',
+    icon: 'fa-bolt',
     menu: [
-      { name: 'Grilled T-Bone Steak', price: 28000, popular: true, image: 'images/t-bone.jpg' },
-      { name: 'Beef Ribs (half rack)', price: 22000, image: 'images/beef-ribs.jpg' },
-      { name: 'Boerewors Roll', price: 9000, image: 'images/boerewors.jpg' },
-      { name: 'Spicy Beef Burger', price: 13500, image: 'images/spicy-beef-burger.jpg' },
-      { name: 'Meat Platter (for 2)', price: 45000, image: 'images/meat-platter.jpg' },
-      { name: 'Coleslaw', price: 3500, image: 'images/coleslaw-meat.jpg' }
+      { name: 'Masala Chips', price: 6000, popular: true, image: 'images/masala-chips.jpg' },
+      { name: 'Chips & Eggs', price: 6000, popular: true, image: 'images/.jpg' },
+      { name: 'Peri Peri Wings', price: 12000, popular: true, image: 'images/.jpg' },
+      { name: 'Chicken Wings', price: 17000, popular: true, image: 'images/.jpg' },
+      { name: 'Grilled Chicken', price: 20000, popular: true, image: 'images/.jpg' },
+      { name: 'Char-grilled Pork ribs', price: 18000, popular: true, image: 'images/.jpg' },
+      { name: 'T-bone Steak', price: 16000, popular: true, image: 'images/.jpg' },
+      { name: 'Chambo(Fried/Open grilled)', price: 18000, popular: true, image: 'images/.jpg' },
+      { name: 'Mac & Cheese', price: 16000, popular: true, image: 'images/.jpg' },
+      { name: 'Batala(medium)', price: 14000, popular: true, image: 'images/.jpg' },
+      { name: 'Batala(large)', price: 16500, popular: true, image: 'images/.jpg' },
+      { name: 'Stir-Fried Beef', price: 9500, popular: true, image: 'images/.jpg' },
     ]
-  }
-};
+  },
+}
 
 // State
 let currentResto = 'kips';
