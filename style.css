@@ -461,6 +461,34 @@
       margin-top: 0.5rem;
     }
 
+    .cart-actions {
+      display: flex;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .clear-cart-btn {
+      background: #f0e0d4;
+      color: #5a3e35;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: 0.2s;
+      flex: 1;
+      border: 1px solid #e2c9b8;
+    }
+
+    .clear-cart-btn:hover {
+      background: #e5d1c2;
+    }
+
     .cart-fields {
       margin: 1.2rem 0 0.8rem;
     }
