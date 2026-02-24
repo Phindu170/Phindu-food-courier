@@ -17,6 +17,11 @@
       padding: 0 2rem;
     }
 
+    /* ===== MAIN ORDERING PAGE (hidden initially) ===== */
+    #main-content {
+      display: none;
+    }
+
     /* ----- Header ----- */
     .header {
       display: flex;
